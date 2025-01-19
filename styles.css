@@ -175,8 +175,9 @@ body {
   
   .calendar-grid {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(7, 1fr); /* Siempre 7 columnas */
     padding: 10px;
+    grid-gap: 1px;
   }
   
   .calendar-grid .day-names {
@@ -241,12 +242,13 @@ body {
     text-align: center;
     width: 90%;
     max-width: 400px;
+    position: relative; /* Posiciona el botón de cierre */
   }
   
   .modal .close {
     position: absolute;
     top: 10px;
-    right: 20px;
+    right: 10px;
     font-size: 20px;
     cursor: pointer;
     color: #333;
@@ -264,5 +266,17 @@ body {
   
   .add-to-calendar:hover {
     background: #ef6c00;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .calendar-grid div {
+      font-size: 12px;
+      padding: 8px;
+    }
+  
+    .month h2 {
+      font-size: 16px;
+    }
   }
   
