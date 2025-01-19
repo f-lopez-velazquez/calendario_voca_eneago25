@@ -1,0 +1,268 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    color: #333;
+  }
+  
+  header {
+    background-color: #f57c00; /* Más claro, basado en el logo */
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .header-content .logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  .main-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .calendar-container {
+    flex: 2;
+    margin-right: 20px;
+  }
+  
+  .activities-section {
+    flex: 1;
+    background: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .activities-section h2 {
+    color: #f57c00;
+  }
+  
+  .activities-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .activities-section li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .activities-section .start {
+    background-color: #ffab91; /* Claro para inicio */
+  }
+  
+  .activities-section .end {
+    background-color: #d84315; /* Claro para fin */
+  }
+  
+  .activities-section .event-day {
+    background-color: #fff59d; /* Claro para exámenes */
+    color: #333;
+  }
+  
+  .activities-section .cultural {
+    background-color: #ce93d8; /* Claro para eventos culturales */
+  }
+  
+  .activities-section .admin {
+    background-color: #b2ebf2; /* Claro para administrativos */
+    color: #333;
+  }
+  
+  .activities-section .gray {
+    background-color: #e0e0e0;
+    color: #333;
+  }
+  
+  /* Color explanation */
+  .color-explanation {
+    margin: 20px auto;
+    padding: 10px;
+    width: 90%;
+    max-width: 800px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: left;
+  }
+  
+  .color-explanation h3 {
+    color: #f57c00;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .color-explanation ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .color-explanation li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+  
+  .color-explanation .legend-box {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    border-radius: 3px;
+  }
+  
+  .color-explanation .start {
+    background-color: #ffab91;
+  }
+  
+  .color-explanation .end {
+    background-color: #d84315;
+    color: #fff;
+  }
+  
+  .color-explanation .event-day {
+    background-color: #fff59d;
+  }
+  
+  .color-explanation .cultural {
+    background-color: #ce93d8;
+  }
+  
+  .color-explanation .admin {
+    background-color: #b2ebf2;
+  }
+  
+  .color-explanation .gray {
+    background-color: #e0e0e0;
+  }
+  
+  /* Calendar styles */
+  #calendar-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .month {
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .month h2 {
+    background: #f57c00;
+    color: white;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 10px;
+  }
+  
+  .calendar-grid .day-names {
+    font-weight: bold;
+    background: #ffe0b2;
+    text-align: center;
+  }
+  
+  .calendar-grid div {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+  }
+  
+  .calendar-grid div.inactive {
+    background-color: #f0f0f0;
+  }
+  
+  .calendar-grid div.start {
+    background-color: #ffab91;
+  }
+  
+  .calendar-grid div.end {
+    background-color: #d84315;
+    color: #fff;
+  }
+  
+  .calendar-grid div.event-day {
+    background-color: #fff59d;
+  }
+  
+  .calendar-grid div.cultural {
+    background-color: #ce93d8;
+  }
+  
+  .calendar-grid div.admin {
+    background-color: #b2ebf2;
+  }
+  
+  .calendar-grid div.gray {
+    background-color: #e0e0e0;
+  }
+  
+  /* Modal styles */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  .modal .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .add-to-calendar {
+    display: inline-block;
+    margin-top: 10px;
+    background: #f57c00;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .add-to-calendar:hover {
+    background: #ef6c00;
+  }
+  

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendario Escolar Interactivo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <img src="https://i.imgur.com/kuXbkuY.jpeg" alt="Logo Preparatoria" class="logo">
+      <h1>Calendario Escolar Enero - Julio 2025</h1>
+      <p>Creado por Francisco López Velázquez</p>
+    </div>
+  </header>
+
+  <div class="main-container">
+    <div class="calendar-container">
+      <div id="calendar-container">
+        <!-- Calendarios mensuales generados dinámicamente -->
+      </div>
+    </div>
+
+    <div class="activities-section">
+      <h2>Lista de Actividades</h2>
+      <ul id="activities-list">
+        <!-- Lista de actividades generada dinámicamente -->
+      </ul>
+    </div>
+  </div>
+
+  <div class="color-explanation">
+    <h3>Código de Colores:</h3>
+    <ul>
+      <li><span class="legend-box start"></span> Inicio de clases</li>
+      <li><span class="legend-box end"></span> Fin de ciclo escolar</li>
+      <li><span class="legend-box event-day"></span> Semanas de parciales o exámenes</li>
+      <li><span class="legend-box cultural"></span> Eventos sociales/culturales/festivos</li>
+      <li><span class="legend-box admin"></span> Eventos administrativos</li>
+      <li><span class="legend-box gray"></span> Días de asueto/vacaciones</li>
+    </ul>
+  </div>
+
+  <!-- Modal para detalles del evento -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <button class="close-modal" id="close-modal">&times;</button>
+      <h3 id="modal-title"></h3>
+      <p id="modal-details"></p>
+      <a id="google-calendar-link" href="#" target="_blank" class="add-to-calendar">Agregar al Calendario de Google</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
